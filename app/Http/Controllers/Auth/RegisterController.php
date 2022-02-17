@@ -42,12 +42,12 @@ class RegisterController extends Controller
         $this->middleware('guest');
        
     }
-    public function index()
-    {
-        $Getcountrylist = Country::all();
-        return $Getcountrylist;
-        // return view('auth/register',compact('Getcountrylist'));
-    }
+    // public function index()
+    // {
+    //     $Getcountrylist = Country::all();
+    //     return $Getcountrylist;
+    //     // return view('auth/register',compact('Getcountrylist'));
+    // }
 
     /**
      * Get a validator for an incoming registration request.
