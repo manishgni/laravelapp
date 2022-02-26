@@ -1,10 +1,10 @@
 <?php
 
 namespace App\Http\Controllers;
-use App\Models\api_key;
-use Illuminate\Support\Facades\DB;
 
 use Illuminate\Http\Request;
+use App\Models\api_key;
+use Illuminate\Support\Facades\DB;
 
 class HomeController extends Controller
 {
@@ -25,7 +25,7 @@ class HomeController extends Controller
      */
     public function index()
     {
-        return view('home');
+        return view('/home');
     }
 
     public function api(){
@@ -41,6 +41,4 @@ class HomeController extends Controller
         dd($api_address);
         
     }
-
-   
 }

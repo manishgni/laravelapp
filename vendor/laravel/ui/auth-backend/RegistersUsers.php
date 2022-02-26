@@ -9,8 +9,6 @@ use Illuminate\Support\Facades\Auth;
 use App\Models\Country;
 use App\Models\State;
 
-
-
 trait RegistersUsers
 {
     use RedirectsUsers;
@@ -22,7 +20,6 @@ trait RegistersUsers
      */
     public function showRegistrationForm()
     {
-        // $Getcountrylist = 
         $response['country']= Country::all();
         $response['state']= State::all();
         return view('auth.register',$response);

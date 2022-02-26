@@ -4,6 +4,8 @@
 
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\Main;
+
+
 // use App\Http\Controllers\Api_key;
 
 
@@ -18,21 +20,23 @@ use App\Http\Controllers\Main;
 |
 */
 
-Auth::routes();
+// Auth::routes();
 
-Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
-Route::get('/api', [App\Http\Controllers\HomeController::class, 'api'])->name('api');
+// Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
+// Route::get('/api', [App\Http\Controllers\HomeController::class, 'api'])->name('api');
 
 // Route::get('/api', [App\Http\Controllers\api::class, 'api'])->name('api');
 // Route::get('api_key', 'Api_key@api_key');
-
+// Route::get('admin', function () {
+//     return view('admin');
+// });
 
 
 Route::get('/', function () {
     return view('welcome');
 });
-// Route::get('/apis', function () {
-//         return view('home');
+// Route::get('/', function () {
+//         return view('auth/auth-page');
 //     });
 // Route::get('/banner', function () {
 //     return view('create-banner');
@@ -48,3 +52,7 @@ Route::get('/', function () {
 
 
 
+
+Auth::routes();
+
+Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
